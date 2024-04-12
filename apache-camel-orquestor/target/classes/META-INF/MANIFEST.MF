@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Usuario
+Build-Jdk: 17.0.10
+Implementation-Title: orquestadorCamel
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: co.com.jhonatan.service.apacheCamel
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/orquestadorCam
+ el/
+Created-By: Maven Integration for Eclipse
+
