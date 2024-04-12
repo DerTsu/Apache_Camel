@@ -12,9 +12,6 @@ import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-/**
- * JsonApiBodyRequest
- */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-04-12T11:12:49.479-05:00[America/Bogota]")
 public class JsonApiBodyRequest   {
@@ -32,10 +29,6 @@ public class JsonApiBodyRequest   {
 	    return this;
 	  }
 
-	  /**
-	   * Get data
-	   * @return data
-	  **/
 	  @ApiModelProperty(required = true, value = "")
 	  @NotNull
 	  @Valid
@@ -75,10 +68,6 @@ public class JsonApiBodyRequest   {
 	    return sb.toString();
 	  }
 
-	  /**
-	   * Convert the given object to string with each line indented by 4 spaces
-	   * (except the first line).
-	   */
 	  private String toIndentedString(java.lang.Object o) {
 	    if (o == null) {
 	      return "null";

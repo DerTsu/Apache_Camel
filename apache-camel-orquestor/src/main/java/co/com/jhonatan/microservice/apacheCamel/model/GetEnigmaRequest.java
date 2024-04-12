@@ -10,9 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-/**
- * GetEnigmaRequest
- */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-04-12T11:12:49.479-05:00[America/Bogota]")
 public class GetEnigmaRequest   {
@@ -27,10 +24,6 @@ public class GetEnigmaRequest   {
 	    return this;
 	  }
 
-	  /**
-	   * Get header
-	   * @return header
-	  **/
 	  @ApiModelProperty(required = true, value = "")
 	  @NotNull
 
@@ -48,10 +41,6 @@ public class GetEnigmaRequest   {
 	    return this;
 	  }
 
-	  /**
-	   * Get enigma
-	   * @return enigma
-	  **/
 	  @ApiModelProperty(required = true, value = "")
 	  @NotNull
 
@@ -93,10 +82,6 @@ public class GetEnigmaRequest   {
 	    return sb.toString();
 	  }
 
-	  /**
-	   * Convert the given object to string with each line indented by 4 spaces
-	   * (except the first line).
-	   */
 	  private String toIndentedString(java.lang.Object o) {
 	    if (o == null) {
 	      return "null";

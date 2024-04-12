@@ -25,10 +25,6 @@ public class ClientGetEnigmaStepResponse   {
 	    return this;
 	  }
 
-	  /**
-	   * Get header
-	   * @return header
-	  **/
 	  @ApiModelProperty(required = true, value = "")
 	  @NotNull
 
@@ -46,10 +42,6 @@ public class ClientGetEnigmaStepResponse   {
 	    return this;
 	  }
 
-	  /**
-	   * Get answer
-	   * @return answer
-	  **/
 	  @ApiModelProperty(required = true, value = "")
 	  @NotNull
 
@@ -91,10 +83,6 @@ public class ClientGetEnigmaStepResponse   {
 	    return sb.toString();
 	  }
 
-	  /**
-	   * Convert the given object to string with each line indented by 4 spaces
-	   * (except the first line).
-	   */
 	  private String toIndentedString(java.lang.Object o) {
 	    if (o == null) {
 	      return "null";
