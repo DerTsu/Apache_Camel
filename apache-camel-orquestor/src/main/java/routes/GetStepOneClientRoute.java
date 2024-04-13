@@ -16,7 +16,7 @@ public class GetStepOneClientRoute extends RouteBuilder{
             .routeId("stepOne")
                 .setHeader(Exchange.HTTP_METHOD, constant("POST"))
                 .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-                //.setBody (simple("{\n  \"data\": [\n    {\n      \"header\": {\n        \"id\": \"12345\",\n        \"type\": \"TestGiraffeRefrigerator\"\n      },\n      \"enigma\": \"How to put a giraffe into a refrigerator?\"\n    }\n  ]\n}"))
+                
                 .to("freemarker:templates/GetStepOneClientTemplate.ftl")
                 .log("Request microservice step one ${body}")
                 .hystrix()
@@ -25,7 +25,6 @@ public class GetStepOneClientRoute extends RouteBuilder{
                 .convertBodyTo(String.class)
                 .log("Response microservice step one ${body}")
             	.unmarshal().json(JsonLibrary.Jackson, ClientJsonApiBodyResponseSuccess.class)
-            	//.log("Java Response microservice step one ${body}")
             	.process(new Processor() {
             		@Override
             	    public void process(Exchange exchange) throws Exception {
@@ -34,8 +33,7 @@ public class GetStepOneClientRoute extends RouteBuilder{
 
             	        if (stepOneResponse.getData().get(0).getAnswer().equalsIgnoreCase("Paso 1: Abrir el refrigerador ")) {
             	            exchange.setProperty("Step1", stepOneResponse.getData().get(0).getAnswer());
-            	            //exchange.setProperty("Error", "0000");
-            	            //exchange.setProperty("descError", "No error");
+            	            
             	        } else {
             	            exchange.setProperty("Error", "0001");
             	            exchange.setProperty("descError", "Step one is not valid");

@@ -16,7 +16,6 @@ public class GetStepTwoClientRoute extends RouteBuilder{
             .routeId("stepTwo")
             .setHeader(Exchange.HTTP_METHOD, constant("POST"))
              .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-                //.setBody (simple("{\n  \"data\": [\n    {\n      \"header\": {\n        \"id\": \"12345\",\n        \"type\": \"TestGiraffeRefrigerator\"\n      },\n      \"enigma\": \"How to put a giraffe into a refrigerator?\"\n    }\n  ]\n}"))
                 .to("freemarker:templates/GetStepTwoClientTemplate.ftl")
                 .log("Request microservice step two ${body}")
                 .hystrix()
@@ -25,7 +24,6 @@ public class GetStepTwoClientRoute extends RouteBuilder{
                 .convertBodyTo(String.class)
                 .log("Response microservice step two ${body}")
             	.unmarshal().json(JsonLibrary.Jackson, ClientJsonApiBodyResponseSuccess.class)
-            	//.log("Java Response microservice step one ${body}")
             	.process(new Processor() {
             		@Override
             	    public void process(Exchange exchange) throws Exception {
